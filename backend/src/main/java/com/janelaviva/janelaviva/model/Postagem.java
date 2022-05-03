@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="tb_postagem")
+@Table(name="tb_postagens")
 public class Postagem {
 	
 	@Id
@@ -26,7 +26,7 @@ public class Postagem {
 	private int curtidas;
 
 	@ManyToOne
-	@JsonIgnoreProperties("evento")
+	@JsonIgnoreProperties("postagem")
 	private Evento evento;
 	
 	public Long getId() {

@@ -34,8 +34,8 @@ public class Evento {
 	
 	private String data;
 	
-	@OneToMany(mappedBy ="postagem",cascade=CascadeType.REMOVE)
-	@JsonIgnoreProperties("postagem")
+	@OneToMany(mappedBy ="evento",cascade=CascadeType.REMOVE)
+	@JsonIgnoreProperties("evento")
 	private List<Postagem> postagens;
 		
 	public Long getId() {
