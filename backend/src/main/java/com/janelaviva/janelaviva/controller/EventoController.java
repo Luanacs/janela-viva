@@ -50,7 +50,7 @@ public class EventoController {
 	@PutMapping
 	public ResponseEntity<Evento> put(@Valid @RequestBody Evento evento) {
 		return repository.findById(evento.getId())
-				.map(resposta -> ResponseEntity.status(HttpStatus.CREATED).body(repository.save(evento)))
+				.map(resposta -> ResponseEntity.status(HttpStatus.OK).body(repository.save(evento)))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 
