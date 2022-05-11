@@ -29,6 +29,10 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Evento evento;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
+	
 	public Long getId() {
 		return id;
 	}
@@ -58,6 +62,14 @@ public class Postagem {
 
 	public void setEvento(Evento evento) {
 		this.evento = evento;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	

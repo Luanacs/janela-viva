@@ -1,14 +1,19 @@
 package com.janelaviva.janelaviva.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Positive;
 import javax.validation.constraints.PositiveOrZero;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="tb_usuarios")
@@ -22,7 +27,7 @@ public class Usuario {
 	@Size(max=255)
 	private String nome;
 	
-	@Positive
+	@PositiveOrZero
 	private int idade;
 	
 	@NotBlank
@@ -34,6 +39,15 @@ public class Usuario {
 
 	@NotBlank
 	private String senha;
+	
+	private String habilidades;
+	
+	@PositiveOrZero
+	private double avaliacao;
+	
+	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("usuario")
+	private List<Postagem> postagem;
 	
 	public Long getId() {
 		return id;
@@ -99,9 +113,12 @@ public class Usuario {
 		this.avaliacao = avaliacao;
 	}
 
-	private String habilidades;
-	
-	@PositiveOrZero
-	private double avaliacao;
-	
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
+	}
+
 }

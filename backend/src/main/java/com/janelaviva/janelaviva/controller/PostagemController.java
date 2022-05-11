@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.janelaviva.janelaviva.model.Evento;
 import com.janelaviva.janelaviva.model.Postagem;
 import com.janelaviva.janelaviva.repository.EventoRepository;
 import com.janelaviva.janelaviva.repository.PostagemRepository;
