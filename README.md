@@ -32,3 +32,4 @@ As seguintes ferramentas serão utilizadas no decorrer deste Bootcamp:
 Vem dar um 👋🏽 pra gente no LinkedIn:
 
 [![Linkedin Badge](https://img.shields.io/badge/-luanasiqueira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luana-chaves-siqueira/)](https://www.linkedin.com/in/luana-chaves-siqueira/)
+[![Linkedin Badge](https://img.shields.io/badge/-fabiomrm-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/fabiomrm/)](https://www.linkedin.com/in/fabiomrm/)
